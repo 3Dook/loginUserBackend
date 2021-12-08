@@ -16,8 +16,8 @@ router.route('/')
         try{
             //Error Check Here
             //
-            const { message } = req.body
-            const block = new Block({message})
+            const { message, date } = req.body
+            const block = new Block({message, date})
             await block.save()
             .then((data) => res.json(data))
             .catch(e => res.status(400).json({Error: "Unable to save" + e}))

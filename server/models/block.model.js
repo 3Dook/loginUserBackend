@@ -4,6 +4,7 @@ const Schema = mongoose.Schema;
 
 const BlockSchema = new Schema({
     message: {type: String, required: true},
+    date: {type: String, required:true}
 })
 
 
